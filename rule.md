@@ -7,6 +7,7 @@
 	- その後，issueのタイトルと説明文を追加．
 
 1. ブランチを切る
+	- `git checkout -b ブランチ名`でブランチ作成と同時に移動できる
 	- 「index.htmlを加える」のなら，"feature/add-index"みたいな感じ
 
 1. issueに合わせて作業する
