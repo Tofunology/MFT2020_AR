@@ -16,7 +16,10 @@
 	- `git status`や`git diff`で確認(目視)
 
 1. 変更箇所をコミットしてプッシュする
-	- `git add ファイル名` `git commit -m "きちっと書く"` `git push origin ブランチ名` でOK
+	- `git add ファイル名`
+	- `git commit -m "きちっと書く"`
+	- `git push origin ブランチ名`
+	- でOK
 
 1. pull requestする
 	- ブラウザでgitのページへ飛び，リポジトリのcodeから黄色いバーの`Compare & pull request`をクリック
@@ -34,4 +37,4 @@
 	- `git branch -d ブランチ名`でブランチを削除する
 
 1. ブラウザでgitのページへ飛び，不要なブランチを削除
-	-他の人のかもしれないので，自身が削除したブランチだけ削除
+	- 他の人のかもしれないので，自身が削除したブランチだけ削除
