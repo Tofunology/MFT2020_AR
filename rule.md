@@ -24,7 +24,8 @@
 
 1. pull requestする
 	- ブラウザでgitのページへ飛び，リポジトリのcodeから黄色いバーの`Compare & pull request`をクリック
-	- タイトルはわかりやすく 説明文はissueから#1とか#2とか該当するものを見つけて記載する
+	- タイトルはわかりやすく
+	- 説明文はissueから#1とか#2とか該当するものを見つけて記載する
 	- 例えば該当するissueの下に`#5 opened 12 minutes ago by Gitefu`みたいな感じで書かれていたら，説明文には`#5`と記載する
 
 1. pull requestを許可して，masterブランチにmergeする
@@ -34,8 +35,10 @@
 	- issueから`Close issue`をクリックする
 
 1. コマンドで作成したbranchを消す
-	- 変更を反映するために， `git checkout master`でmasterに戻り， `git pull`で変更を反映する．
+	- 変更を反映するために，
+	- `git checkout master`でmasterに戻り，
+	- `git pull`で変更を反映する．
 	- `git branch -d ブランチ名`でブランチを削除する
 
 1. ブラウザでgitのページへ飛び，不要なブランチを削除
-	- 他の人のかもしれないので，自身が削除したブランチだけ削除
+	- 他の人のブランチかもしれないので，自身が削除したブランチだけ削除
