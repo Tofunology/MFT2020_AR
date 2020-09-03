@@ -1,0 +1,564 @@
+# Blender MTL File: 'None'
+# Material Count: 48
+
+newmtl mmd_tools_rigid_0
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.498039 0.866667 0.831373
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 0
+
+newmtl mmd_tools_rigid_1
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.941176 0.901961 0.549020
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 0
+
+newmtl mmd_tools_rigid_2
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.933333 0.509804 0.933333
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 0
+
+newmtl mmd_tools_rigid_3
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.894118 0.882353
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 0
+
+newmtl mmd_tools_rigid_4
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.560784 0.933333 0.933333
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 0
+
+newmtl mmd_tools_rigid_5
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.678431 1.000000 0.184314
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 0
+
+newmtl mmd_tools_rigid_7
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.576471 0.439216 0.858824
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.500000
+illum 0
+
+newmtl きらきら目
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl ぐるぐる目
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl なごみ
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl はぅ
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl ぱんつ
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\ぱんつ.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\ぱんつ.png
+
+newmtl まつげ
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl まつ毛ハイライト
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl ハイライト
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl ハート目
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl ムカッ
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl 下まつげ
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 口内
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 歯
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 汗
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl 涙
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl 照れ
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl 爪
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+
+newmtl 白
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+
+newmtl 白目
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 眉
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 瞳
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 紺
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+
+newmtl 絶望
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl 耳
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 肌
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+
+newmtl 舌
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 錨
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+
+newmtl 青ざめ
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\その他.png
+
+newmtl 青髪
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+
+newmtl 青髪2
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+
+newmtl 靴
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+
+newmtl 靴底
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿体.tga
+
+newmtl 顔
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 顔＿線なし
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿顔.tga
+
+newmtl 髪＿1
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+
+newmtl 髪＿2
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+
+newmtl 髪＿3
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+
+newmtl 髪＿4
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+
+newmtl 髪＿5
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+
+newmtl 髪＿6
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+
+newmtl 髪＿7
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
+map_d C:\\Users\\riku\\Downloads\\湊あくあ公式mmd_ver1.0\\湊あくあ公式mmd_ver1.0\\湊あくあ＿髪.tga
