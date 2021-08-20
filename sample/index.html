@@ -1,67 +1,80 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<title>tofunology-MFT2020-AR</title>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r110/three.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/EffectComposer.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/ShaderPass.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/RenderPass.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/GlitchPass.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/HalftonePass.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/shaders/CopyShader.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/shaders/DigitalGlitch.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/shaders/HalftoneShader.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
-		<script src="https://unpkg.com/three@0.110.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
-		<script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/three.js/build/ar.js"></script>
-	</head>
-	<body style='margin: 0px; overflow: hidden;'>
-		<script>
-			var darkMaterial = new THREE.MeshBasicMaterial( {color : 0x000000, transparent: true, opacity: 0.0 }); //暗いマテリアルの設定
-			var materials = {}; //マテリアル情報保存場所
-			const renderer = new THREE.WebGLRenderer({
-				antialias: true, //アンチエイリアスを有効に
-				alpha: true //アルファを有効に
-			});
-			renderer.setClearColor(0x000000, 0); //背景の色は透明に
-			renderer.setSize(2560, 1600); //レンダリングのサイズ(大きめにしちった)
-			renderer.domElement.style.position = 'absolute'; //物体のポジションをabsoluteに指定
-			renderer.domElement.style.top = '0px';
-			renderer.domElement.style.left = '0px';
-			document.body.appendChild(renderer.domElement);
 
-			const scene = new THREE.Scene();//シーンのインスタンスの生成
-			scene.traverse( disposeMaterial ); //最初にマテリアル情報全部「退場」
-			scene.children.length = 0; //子要素も全部削除
-			
-			const camera = new THREE.Camera(); //(仮想上の)カメラを設定
-			scene.add(camera); //カメラをシーンに追加
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>tofunology-MFT2020-AR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r110/three.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/GlitchPass.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/HalftonePass.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/shaders/DigitalGlitch.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/shaders/HalftoneShader.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+    <script src="https://unpkg.com/three@0.110.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/three.js/build/ar.js"></script>
+</head>
 
-			var ENTIRE_SCENE = 0, BLOOM_SCENE = 1; //レイヤー管理用の変数を宣言
-			var bloomLayer = new THREE.Layers(); //光らせるオブジェクト用のレイヤーの定義
-			bloomLayer.set( BLOOM_SCENE ); //BLOOM_SCENEにセット
+<body style='margin: 0px; overflow: hidden;'>
+    <script>
+        var darkMaterial = new THREE.MeshBasicMaterial({
+            color: 0x000000,
+            transparent: true,
+            opacity: 0.0
+        }); //暗いマテリアルの設定
+        var materials = {}; //マテリアル情報保存場所
+        const renderer = new THREE.WebGLRenderer({
+            antialias: true, //アンチエイリアスを有効に
+            alpha: true //アルファを有効に
+        });
+        renderer.setClearColor(0x000000, 0); //背景の色は透明に
+        renderer.setSize(2560, 1600); //レンダリングのサイズ(大きめにしちった)
+        renderer.domElement.style.position = 'absolute'; //物体のポジションをabsoluteに指定
+        renderer.domElement.style.top = '0px';
+        renderer.domElement.style.left = '0px';
+        document.body.appendChild(renderer.domElement);
 
-			const arToolkitSource = new THREEx.ArToolkitSource({sourceType: 'webcam'}); //ARのソースをwebcamに
-			var cameraPlane;
-			arToolkitSource.init(() => { // ソースの初期化
-					setTimeout(() => {
-					onResize();
-				}, 2000);
+        const scene = new THREE.Scene(); //シーンのインスタンスの生成
+        scene.traverse(disposeMaterial); //最初にマテリアル情報全部「退場」
+        scene.children.length = 0; //子要素も全部削除
 
-				const video = document.querySelector('video'); //videoグループを探してアタッチ
-				const videoTexture = new THREE.VideoTexture(video); //ビデオからテクスチャを得る
+        const camera = new THREE.Camera(); //(仮想上の)カメラを設定
+        scene.add(camera); //カメラをシーンに追加
 
-				/* カメラの映像を貼り付けるplaneを用意*/
-				cameraPlane = new THREE.Mesh(
-					new THREE.PlaneBufferGeometry(2, 2), //形状
-					new THREE.RawShaderMaterial({ //マテリアル
-						uniforms: {
-							videoTexture: {value: videoTexture},
-							videoScale: {value: 1.0},
-						},
-						//頂点シェダーの決定
-						vertexShader: `
+        var ENTIRE_SCENE = 0,
+            BLOOM_SCENE = 1; //レイヤー管理用の変数を宣言
+        var bloomLayer = new THREE.Layers(); //光らせるオブジェクト用のレイヤーの定義
+        bloomLayer.set(BLOOM_SCENE); //BLOOM_SCENEにセット
+
+        const arToolkitSource = new THREEx.ArToolkitSource({
+            sourceType: 'webcam'
+        }); //ARのソースをwebcamに
+        var cameraPlane;
+        arToolkitSource.init(() => { // ソースの初期化
+            setTimeout(() => {
+                onResize();
+            }, 2000);
+
+            const video = document.querySelector('video'); //videoグループを探してアタッチ
+            const videoTexture = new THREE.VideoTexture(video); //ビデオからテクスチャを得る
+
+            /* カメラの映像を貼り付けるplaneを用意*/
+            cameraPlane = new THREE.Mesh(
+                new THREE.PlaneBufferGeometry(2, 2), //形状
+                new THREE.RawShaderMaterial({ //マテリアル
+                    uniforms: {
+                        videoTexture: {
+                            value: videoTexture
+                        },
+                        videoScale: {
+                            value: 1.0
+                        },
+                    },
+                    //頂点シェダーの決定
+                    vertexShader: `
 							precision highp float;
 							attribute vec3 position;
 							attribute vec2 uv;
@@ -72,8 +85,8 @@
 								gl_Position = vec4(position.x * videoScale, position.y, position.z, 1.0);
 							}
 						`,
-						//頂点シェダーの決定
-						fragmentShader: `
+                    //頂点シェダーの決定
+                    fragmentShader: `
 							precision highp float;
 							varying vec2 v_uv;
 							uniform sampler2D videoTexture;
@@ -81,170 +94,182 @@
 								gl_FragColor = vec4(texture2D(videoTexture, vec2(v_uv.x, v_uv.y)).rgb, 1.0);
 							}
 						`,
-						depthTest: false,
-						depthWrite: false,
-					})
-				);
-				cameraPlane.renderOrder = -1; //レンダリングの順序を最初に(なんで-1なのかリファレンス見つけられんかった)
-				cameraPlane.frustumCulled = false; //表示判断を無効にする
-				scene.add(cameraPlane);  //このplaneをシーンに追加する
-			});
-			
-			//リサイズのイベントに合わせてonResizeを発火
-			addEventListener('resize', () => {
-				onResize();
-			});
+                    depthTest: false,
+                    depthWrite: false,
+                })
+            );
+            cameraPlane.renderOrder = -1; //レンダリングの順序を最初に(なんで-1なのかリファレンス見つけられんかった)
+            cameraPlane.frustumCulled = false; //表示判断を無効にする
+            scene.add(cameraPlane); //このplaneをシーンに追加する
+        });
 
-			var videoWidth,videoHeight;
-			function onResize() {
-				arToolkitSource.onResizeElement(); //カメラ映像のHTML要素のサイズを調整
-				arToolkitSource.copyElementSizeTo(renderer.domElement); // レンダラをトラッキングソースと同じ大きさに
-				if (arToolkitContext.arController !== null) { //上と同様
-					arToolkitSource.copyElementSizeTo(arToolkitContext.arController.canvas);
-				}
-				const video = document.querySelector('video'); //videoの取得
-				if (video !== null) { //videoが存在すれば、リサイズ
-					videoWidth = video.videoWidth;
-					videoHeight = video.videoHeight
-				}
-				cameraPlane.material.uniforms.videoScale.value = (videoWidth / videoHeight)/ 1.33333;// / 1.33333
-			};
+        //リサイズのイベントに合わせてonResizeを発火
+        addEventListener('resize', () => {
+            onResize();
+        });
 
-			//ここはもう呪文
-			const arToolkitContext = new THREEx.ArToolkitContext({
-				cameraParametersUrl: './data/data/camera_para.dat',
-				detectionMode: 'mono' //2値化してマーカーを取得
-			});
+        var videoWidth, videoHeight;
 
-			//この初期化も呪文やで、、、
-			arToolkitContext.init(() => {
-				camera.projectionMatrix.copy(arToolkitContext.getProjectionMatrix());
-			});
+        function onResize() {
+            arToolkitSource.onResizeElement(); //カメラ映像のHTML要素のサイズを調整
+            arToolkitSource.copyElementSizeTo(renderer.domElement); // レンダラをトラッキングソースと同じ大きさに
+            if (arToolkitContext.arController !== null) { //上と同様
+                arToolkitSource.copyElementSizeTo(arToolkitContext.arController.canvas);
+            }
+            const video = document.querySelector('video'); //videoの取得
+            if (video !== null) { //videoが存在すれば、リサイズ
+                videoWidth = video.videoWidth;
+                videoHeight = video.videoHeight
+            }
+            cameraPlane.material.uniforms.videoScale.value = (videoWidth / videoHeight) / 1.33333; // / 1.33333
+        };
 
-			const marker = new THREE.Group(); //マーカーグループを作成
-			scene.add(marker); //マーカーグループをシーンに追加
+        //ここはもう呪文
+        const arToolkitContext = new THREEx.ArToolkitContext({
+            cameraParametersUrl: './data/data/camera_para.dat',
+            detectionMode: 'mono' //2値化してマーカーを取得
+        });
 
-			/* マーカーの設定 */
-			// patternUrl変えて、markerを別のGroupにすればOK
-			const arMarkerControls = new THREEx.ArMarkerControls(arToolkitContext, marker, {
-				type: 'pattern',
-				patternUrl: './data/data/patt.hiro',
-				changeMatrixMode: 'modelViewMatrix'
-			});
+        //この初期化も呪文やで、、、
+        arToolkitContext.init(() => {
+            camera.projectionMatrix.copy(arToolkitContext.getProjectionMatrix());
+        });
 
-			// フォントのロード
-			var loader = new THREE.FontLoader();
-			loader.load( './Beon_Medium.json', function ( font ) { //フォントの読み込み
-				var textGeometry = new THREE.TextGeometry( 'tofunology', { //表示する文字(大文字になっちゃう〜〜(fontの影響))
-					font: font,
-					size: 20.0, //サイズやで
-					height: 3.0, //厚さやで
-					curveSegments: 12, //曲げの綺麗さやで(数値が大きいと重くなることも)
-					bevelThickness: 0.2, //面取りの深さ
-					bevelSize: 0.5,//面取りの位置がアウトラインからどれほど遠く
-					bevelSegments:10, //面取りのセグメント数
-					bevelEnabled: true //面取りする？
-				} );
-				// マテリアルの作成
-				var material = new THREE.MeshPhongMaterial({//マテリアルの色(反射する感じ)
-					color: 0x00FFFF, //マテリアルの色
-					reflectivity: 1.0 // 反射率
-				});
-				// テキストのメッシュを作成
-				var text = new THREE.Mesh( textGeometry, material );
-				// オブジェクトをマーカーに追加
-				marker.add( text );
-				text.position.set(-3,1,-1); //ポジション
-				text.scale.set(0.05,0.05,0.05); //サイズ調整
-				text.rotation.set(2*Math.PI*(-90.0/360.0),0,0); //ラジアンで角度
-				text.scale.multiplyScalar(1); //大きさ(倍率)
-				text.layers.enable( BLOOM_SCENE ); //光らせるレイヤーに追加
-			} );
+        const marker = new THREE.Group(); //マーカーグループを作成
+        scene.add(marker); //マーカーグループをシーンに追加
 
-			var texture = new THREE.TextureLoader().load('./chikens.png', (tex) => {
-				// 縦横比を保って適当にリサイズ
-				const w = 5;
-				const h = tex.image.height/(tex.image.width/w);
-				// 平面
-				const geometry = new THREE.PlaneGeometry(1, 1);//平面の生成
-				const material = new THREE.MeshPhongMaterial( { map:texture } );//マテリアルを生成
-				material.alphaTest = 0.5 //アルファを有効に
-				const plane = new THREE.Mesh( geometry, material ); //planeのメッシュを作成
-				plane.scale.set(w, h, 1);//サイズ
-				plane.rotation.set(2*Math.PI*(-90.0/360.0),0,0); //ラジアンで角度
-				marker.add( plane ); //マーカーに追加
-				//plane.layers.enable( BLOOM_SCENE ); //光るレイヤーに追加
-			});
+        /* マーカーの設定 */
+        // patternUrl変えて、markerを別のGroupにすればOK
+        const arMarkerControls = new THREEx.ArMarkerControls(arToolkitContext, marker, {
+            type: 'pattern',
+            patternUrl: './data/data/patt.hiro',
+            changeMatrixMode: 'modelViewMatrix'
+        });
 
+        // フォントのロード
+        var loader = new THREE.FontLoader();
+        loader.load('./Beon_Medium.json', function(font) { //フォントの読み込み
+            var textGeometry = new THREE.TextGeometry('tofunology', { //表示する文字(大文字になっちゃう〜〜(fontの影響))
+                font: font,
+                size: 20.0, //サイズやで
+                height: 3.0, //厚さやで
+                curveSegments: 12, //曲げの綺麗さやで(数値が大きいと重くなることも)
+                bevelThickness: 0.2, //面取りの深さ
+                bevelSize: 0.5, //面取りの位置がアウトラインからどれほど遠く
+                bevelSegments: 10, //面取りのセグメント数
+                bevelEnabled: true //面取りする？
+            });
+            // マテリアルの作成
+            var material = new THREE.MeshPhongMaterial({ //マテリアルの色(反射する感じ)
+                color: 0x00FFFF, //マテリアルの色
+                reflectivity: 1.0 // 反射率
+            });
+            // テキストのメッシュを作成
+            var text = new THREE.Mesh(textGeometry, material);
+            // オブジェクトをマーカーに追加
+            marker.add(text);
+            text.position.set(-3, 1, -1); //ポジション
+            text.scale.set(0.05, 0.05, 0.05); //サイズ調整
+            text.rotation.set(2 * Math.PI * (-90.0 / 360.0), 0, 0); //ラジアンで角度
+            text.scale.multiplyScalar(1); //大きさ(倍率)
+            text.layers.enable(BLOOM_SCENE); //光らせるレイヤーに追加
+        });
 
-			var movie = document.createElement("video");  // 指定IDの要素を取得
-				movie.width = 512;
-				movie.height = 512;
-				movie.autoplay = true;
-				movie.loop = true;
-				movie.src = "./resizeAlpha.mp4";
-				movie.loop = true;
-				movie.crossOrigin = "anonymous";
-				movie.playsinline = true;
-				movie.style = "display:none";
-				movie.type = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
-			
-			var movieGeometry = new THREE.PlaneGeometry(1, 1);//平面の生成
-
-			var movieTexture = new THREE.VideoTexture( movie );
-			movieTexture.minFilter = THREE.LinearFilter;
-			movieTexture.maxFilter = THREE.LinearFilter;
-			movieTexture.format = THREE.RGBFormat;
-			var movieMaterial   = new THREE.MeshBasicMaterial( { map : movieTexture } );
-			movieMaterial.alphaTest=0.5;
-			var	movieObject = new THREE.Mesh( movieGeometry, movieMaterial );
-			movieObject.rotation.set(2*Math.PI*(-90.0/360.0),0,0); //ラジアンで角度
-			marker.add( movieObject );
+        var texture = new THREE.TextureLoader().load('./chikens.png', (tex) => {
+            // 縦横比を保って適当にリサイズ
+            const w = 5;
+            const h = tex.image.height / (tex.image.width / w);
+            // 平面
+            const geometry = new THREE.PlaneGeometry(1, 1); //平面の生成
+            const material = new THREE.MeshPhongMaterial({
+                map: texture
+            }); //マテリアルを生成
+            material.alphaTest = 0.5 //アルファを有効に
+            const plane = new THREE.Mesh(geometry, material); //planeのメッシュを作成
+            plane.scale.set(w, h, 1); //サイズ
+            plane.rotation.set(2 * Math.PI * (-90.0 / 360.0), 0, 0); //ラジアンで角度
+            marker.add(plane); //マーカーに追加
+            //plane.layers.enable( BLOOM_SCENE ); //光るレイヤーに追加
+        });
 
 
-			var annie;
-			var texture2 = new THREE.TextureLoader().load('./run.png', (tex) => {
-				// 縦横比を保って適当にリサイズ
-				const tate =1;
-				const yoko = 10;
-				const w = 1;
-				const h = (tex.image.height/tate)/((tex.image.width/yoko)/w);
-				// 平面
-				const geometry = new THREE.PlaneGeometry(1, 1);//平面の生成
-				annie = new TextureAnimator( texture2, yoko, tate, 10, 75 ); // texture, #horiz, #vert, #total, duration.
-				const material = new THREE.MeshBasicMaterial( { map: texture2, side:THREE.DoubleSide } );
-				material.map.needsUpdate = true; 
-				material.alphaTest = 0.5;
-				const plane = new THREE.Mesh( geometry, material ); //planeのメッシュを作成
-				plane.scale.set(w, h, 1);//サイズ
-				plane.position.set(0,0,0);
-				plane.rotation.set(2*Math.PI*(-90.0/360.0),0,0); //ラジアンで角度
-				marker.add( plane ); //マーカーに追加
-			});
+        var movie = document.createElement("video"); // 指定IDの要素を取得
+        movie.width = 512;
+        movie.height = 512;
+        movie.autoplay = true;
+        movie.loop = true;
+        movie.src = "./resizeAlpha.mp4";
+        movie.loop = true;
+        movie.crossOrigin = "anonymous";
+        movie.playsinline = true;
+        movie.style = "display:none";
+        movie.type = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-			//ライト追加
-			marker.add( new THREE.AmbientLight( 0xFFFFFFF ) );
+        var movieGeometry = new THREE.PlaneGeometry(1, 1); //平面の生成
 
-			//エフェクト用のComposer用意
-			const bloomComposer = new THREE.EffectComposer(renderer);
-			//レンダーのパスを変数に
-			const renderpass = new THREE.RenderPass(scene, camera);
+        var movieTexture = new THREE.VideoTexture(movie);
+        movieTexture.minFilter = THREE.LinearFilter;
+        movieTexture.maxFilter = THREE.LinearFilter;
+        movieTexture.format = THREE.RGBFormat;
+        var movieMaterial = new THREE.MeshBasicMaterial({
+            map: movieTexture
+        });
+        movieMaterial.alphaTest = 0.5;
+        var movieObject = new THREE.Mesh(movieGeometry, movieMaterial);
+        movieObject.rotation.set(2 * Math.PI * (-90.0 / 360.0), 0, 0); //ラジアンで角度
+        marker.add(movieObject);
 
-			//bloom処理のパスを用意
-			var bloomPass = new THREE.UnrealBloomPass( new THREE.Vector2( videoWidth, videoHeight ), 1.5, 0.4, 0.85 );
-			bloomPass.threshold = 0.3; //光らせる閾値決定
-			bloomPass.strength = 0.8; //光らせる強さ
-			bloomPass.radius = 0.37; //bloomの範囲
-			bloomComposer.renderToScreen = false; //bloomはrenderToScreen機能を持たない
-			bloomComposer.addPass(renderpass); //Composerにレンダーパスを追加
-			bloomComposer.addPass( bloomPass );//Composerにbloomパスを追加
-			var finalPass = new THREE.ShaderPass(
-				new THREE.ShaderMaterial( {
-					uniforms: {
-						baseTexture: { value: null },
-						bloomTexture: { value: bloomComposer.renderTarget2.texture }
-					},
-					vertexShader: `
+
+        var annie;
+        var texture2 = new THREE.TextureLoader().load('./run.png', (tex) => {
+            // 縦横比を保って適当にリサイズ
+            const tate = 1;
+            const yoko = 10;
+            const w = 1;
+            const h = (tex.image.height / tate) / ((tex.image.width / yoko) / w);
+            // 平面
+            const geometry = new THREE.PlaneGeometry(1, 1); //平面の生成
+            annie = new TextureAnimator(texture2, yoko, tate, 10, 75); // texture, #horiz, #vert, #total, duration.
+            const material = new THREE.MeshBasicMaterial({
+                map: texture2,
+                side: THREE.DoubleSide
+            });
+            material.map.needsUpdate = true;
+            material.alphaTest = 0.5;
+            const plane = new THREE.Mesh(geometry, material); //planeのメッシュを作成
+            plane.scale.set(w, h, 1); //サイズ
+            plane.position.set(0, 0, 0);
+            plane.rotation.set(2 * Math.PI * (-90.0 / 360.0), 0, 0); //ラジアンで角度
+            marker.add(plane); //マーカーに追加
+        });
+
+        //ライト追加
+        marker.add(new THREE.AmbientLight(0xFFFFFFF));
+
+        //エフェクト用のComposer用意
+        const bloomComposer = new THREE.EffectComposer(renderer);
+        //レンダーのパスを変数に
+        const renderpass = new THREE.RenderPass(scene, camera);
+
+        //bloom処理のパスを用意
+        var bloomPass = new THREE.UnrealBloomPass(new THREE.Vector2(videoWidth, videoHeight), 1.5, 0.4, 0.85);
+        bloomPass.threshold = 0.3; //光らせる閾値決定
+        bloomPass.strength = 0.8; //光らせる強さ
+        bloomPass.radius = 0.37; //bloomの範囲
+        bloomComposer.renderToScreen = false; //bloomはrenderToScreen機能を持たない
+        bloomComposer.addPass(renderpass); //Composerにレンダーパスを追加
+        bloomComposer.addPass(bloomPass); //Composerにbloomパスを追加
+        var finalPass = new THREE.ShaderPass(
+            new THREE.ShaderMaterial({
+                uniforms: {
+                    baseTexture: {
+                        value: null
+                    },
+                    bloomTexture: {
+                        value: bloomComposer.renderTarget2.texture
+                    }
+                },
+                vertexShader: `
 						varying vec2 vUv;
 
 						void main() {
@@ -254,7 +279,7 @@
 							gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 
 						}`,
-					fragmentShader: `
+                fragmentShader: `
 					uniform sampler2D baseTexture;
 					uniform sampler2D bloomTexture;
 
@@ -265,87 +290,87 @@
 						gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
 
 					}`,
-					defines: {}
-				} ), "baseTexture"
-			);
-			finalPass.needsSwap = true;
+                defines: {}
+            }), "baseTexture"
+        );
+        finalPass.needsSwap = true;
 
-			var finalComposer = new THREE.EffectComposer( renderer );
-			finalComposer.addPass( renderpass );
-			finalComposer.addPass( finalPass );
+        var finalComposer = new THREE.EffectComposer(renderer);
+        finalComposer.addPass(renderpass);
+        finalComposer.addPass(finalPass);
 
-			const clock = new THREE.Clock();
-			requestAnimationFrame(function animate(){
-				const delta = clock.getDelta();
-				if(annie != null){
-					annie.update(1000 * delta);
-				}
-				requestAnimationFrame(animate);
-				if (arToolkitSource.ready) {
-					arToolkitContext.update(arToolkitSource.domElement);
-				}
-				scene.traverse( darkenNonBloomed );
-				bloomComposer.render();
-				scene.traverse( restoreMaterial );
-				finalComposer.render();
-			});
+        const clock = new THREE.Clock();
+        requestAnimationFrame(function animate() {
+            const delta = clock.getDelta();
+            if (annie != null) {
+                annie.update(1000 * delta);
+            }
+            requestAnimationFrame(animate);
+            if (arToolkitSource.ready) {
+                arToolkitContext.update(arToolkitSource.domElement);
+            }
+            scene.traverse(darkenNonBloomed);
+            bloomComposer.render();
+            scene.traverse(restoreMaterial);
+            finalComposer.render();
+        });
 
-			function darkenNonBloomed( obj ) {
-				if ( obj.isMesh && bloomLayer.test( obj.layers ) === false ) {
-					materials[ obj.uuid ] = obj.material;
-					obj.material = darkMaterial;
-				}
-			}
+        function darkenNonBloomed(obj) {
+            if (obj.isMesh && bloomLayer.test(obj.layers) === false) {
+                materials[obj.uuid] = obj.material;
+                obj.material = darkMaterial;
+            }
+        }
 
-			function restoreMaterial( obj ) {
-				if ( watch = materials[ obj.uuid ] ) {
-					obj.material = materials[ obj.uuid ];
-					delete materials[ obj.uuid ];
-				}
-			}
-			function disposeMaterial( obj ) {
-				if ( obj.material ) {
-					obj.material.dispose();
-				}
-			}
-			function TextureAnimator(texture, tilesHoriz, tilesVert, numTiles, tileDispDuration) 
-			{	
-				// note: texture passed by reference, will be updated by the update function.
-					
-				this.tilesHorizontal = tilesHoriz;
-				this.tilesVertical = tilesVert;
-				// how many images does this spritesheet contain?
-				//  usually equals tilesHoriz * tilesVert, but not necessarily,
-				//  if there at blank tiles at the bottom of the spritesheet. 
-				this.numberOfTiles = numTiles;
-				texture.wrapS = texture.wrapT = THREE.RepeatWrapping; 
-				texture.repeat.set( 1 / this.tilesHorizontal, 1 / this.tilesVertical );
+        function restoreMaterial(obj) {
+            if (watch = materials[obj.uuid]) {
+                obj.material = materials[obj.uuid];
+                delete materials[obj.uuid];
+            }
+        }
 
-				// how long should each image be displayed?
-				this.tileDisplayDuration = tileDispDuration;
+        function disposeMaterial(obj) {
+            if (obj.material) {
+                obj.material.dispose();
+            }
+        }
 
-				// how long has the current image been displayed?
-				this.currentDisplayTime = 0;
+        function TextureAnimator(texture, tilesHoriz, tilesVert, numTiles, tileDispDuration) {
+            // note: texture passed by reference, will be updated by the update function.
 
-				// which image is currently being displayed?
-				this.currentTile = 0;
-					
-				this.update = function( milliSec )
-				{
-					this.currentDisplayTime += milliSec;
-					while (this.currentDisplayTime > this.tileDisplayDuration)
-					{
-						this.currentDisplayTime -= this.tileDisplayDuration;
-						this.currentTile++;
-						if (this.currentTile == this.numberOfTiles)
-							this.currentTile = 0;
-						var currentColumn = this.currentTile % this.tilesHorizontal;
-						texture.offset.x = currentColumn / this.tilesHorizontal;
-						var currentRow = Math.floor( this.currentTile / this.tilesHorizontal );
-						texture.offset.y = currentRow / this.tilesVertical;
-					}
-				};
-			}		
-		</script>
-	</body>
+            this.tilesHorizontal = tilesHoriz;
+            this.tilesVertical = tilesVert;
+            // how many images does this spritesheet contain?
+            //  usually equals tilesHoriz * tilesVert, but not necessarily,
+            //  if there at blank tiles at the bottom of the spritesheet. 
+            this.numberOfTiles = numTiles;
+            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+            texture.repeat.set(1 / this.tilesHorizontal, 1 / this.tilesVertical);
+
+            // how long should each image be displayed?
+            this.tileDisplayDuration = tileDispDuration;
+
+            // how long has the current image been displayed?
+            this.currentDisplayTime = 0;
+
+            // which image is currently being displayed?
+            this.currentTile = 0;
+
+            this.update = function(milliSec) {
+                this.currentDisplayTime += milliSec;
+                while (this.currentDisplayTime > this.tileDisplayDuration) {
+                    this.currentDisplayTime -= this.tileDisplayDuration;
+                    this.currentTile++;
+                    if (this.currentTile == this.numberOfTiles)
+                        this.currentTile = 0;
+                    var currentColumn = this.currentTile % this.tilesHorizontal;
+                    texture.offset.x = currentColumn / this.tilesHorizontal;
+                    var currentRow = Math.floor(this.currentTile / this.tilesHorizontal);
+                    texture.offset.y = currentRow / this.tilesVertical;
+                }
+            };
+        }
+    </script>
+</body>
+
 </html>
