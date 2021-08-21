@@ -254,8 +254,8 @@
         //bloom処理のパスを用意
         var bloomPass = new THREE.UnrealBloomPass(new THREE.Vector2(videoWidth, videoHeight), 1.5, 0.4, 0.85);
         bloomPass.threshold = 0.3; //光らせる閾値決定
-        bloomPass.strength = 0.8; //光らせる強さ
-        bloomPass.radius = 0.37; //bloomの範囲
+        bloomPass.strength = 0.4; //光らせる強さ
+        bloomPass.radius = 0.2; //bloomの範囲
         bloomComposer.renderToScreen = false; //bloomはrenderToScreen機能を持たない
         bloomComposer.addPass(renderpass); //Composerにレンダーパスを追加
         bloomComposer.addPass(bloomPass); //Composerにbloomパスを追加
