@@ -151,7 +151,7 @@
         loader.load('./Beon_Medium.json', function(font) { //フォントの読み込み
             var textGeometry = new THREE.TextGeometry('tofunology', { //表示する文字(大文字になっちゃう〜〜(fontの影響))
                 font: font,
-                size: 20.0, //サイズやで
+                size: 10.0, //サイズやで
                 height: 3.0, //厚さやで
                 curveSegments: 12, //曲げの綺麗さやで(数値が大きいと重くなることも)
                 bevelThickness: 0.2, //面取りの深さ
@@ -170,7 +170,7 @@
             marker.add(text);
             text.position.set(-3, 1, -1); //ポジション
             text.scale.set(0.05, 0.05, 0.05); //サイズ調整
-            text.rotation.set(2 * Math.PI * (-90.0 / 360.0), 0, 0); //ラジアンで角度
+            text.rotation.set(2 * Math.PI * (-0.0 / 360.0), 0, 0); //ラジアンで角度
             text.scale.multiplyScalar(1); //大きさ(倍率)
             text.layers.enable(BLOOM_SCENE); //光らせるレイヤーに追加
         });
